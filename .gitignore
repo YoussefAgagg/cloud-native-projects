@@ -1,0 +1,52 @@
+.DS_Store
+.vagrant
+.gradle
+
+HELP.md
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**
+!**/src/test/**
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+bin/
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+/bm-lib/
+/lib/
+/documentation
+
+### VS Code ###
+.vscode/
+**/target
+**/node_modules
+package-lock.json
+
+###E2E_Testing###
+E2E_Testing/node_modules/
+E2E_Testing/package-lock.json
+
+lib/
+
+.bash_profile
+
+.jpb
