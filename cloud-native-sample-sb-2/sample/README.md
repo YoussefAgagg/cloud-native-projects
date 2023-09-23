@@ -1,4 +1,4 @@
-# Cloud native application with spring boot 2.7.16
+# Sample example of running spring boot app in Kubernetes cluster in local machine
 to run the application 
 ```bash
 ./gradlew bootrun
@@ -9,7 +9,7 @@ to package your application as a container image, using Cloud Native [Buildpacks
 ```
 to run the build image 
 ```bash
-docker run --rm  --platform linux/amd64 --name cloud-native-sample-sb-2 -p 8080:8080 cloud-native-sample-sb-2:0.0.1-SNAPSHOT
+docker run --rm  --platform linux/amd64 --name sample-sb-2 -p 8080:8080 sample-sb-2:0.0.1-SNAPSHOT
 ```
 go to: [http://localhost:8080/](http://localhost:8080/)
 you will see the welcome message.
@@ -23,10 +23,10 @@ minikube start
 ```
 to deploy it to a cluster using Kubernetes
 ```bash
-minikube image load cloud-native-sample-sb-2:0.0.1-SNAPSHOT
+minikube image load sample-sb-2:0.0.1-SNAPSHOT
 ```
 ```bash
-kubectl create deployment cloud-native-sample-sb-2 --image=cloud-native-sample-sb-2:0.0.1-SNAPSHOT
+kubectl create deployment sample-sb-2 --image=sample-sb-2:0.0.1-SNAPSHOT
 ```
 verify the creation of the Deployment object as follows:
 ```bash
@@ -36,29 +36,29 @@ kubectl get deployment
 kubectl get pod
 ```
 ```bash
-kubectl logs deployment/cloud-native-sample-sb-2
+kubectl logs deployment/sample-sb-2
 ```
 expose the  Service to the cluster:
 ```bash
-kubectl expose deployment cloud-native-sample-sb-2 --name=cloud-native-sample-sb-2 --port=8080
+kubectl expose deployment sample-sb-2 --name=sample-sb-2 --port=8080
 ```
 verify that it’s been created correctly:
 ```bash
-kubectl get service cloud-native-sample-sb-2
+kubectl get service sample-sb-2
 ```
 forward the traffic from a local port on your computer (for example, 8000) to the port exposed by the Service inside the cluster (8080):
 ```bash
-kubectl port-forward service/cloud-native-sample-sb-2 8000:8080
+kubectl port-forward service/sample-sb-2 8000:8080
 ```
 Open a browser window, navigate to http://localhost:8000/ and verify that you still get the same greeting as before.
 
 delete the Service : 
 ```bash
-kubectl delete service cloud-native-sample-sb-2
+kubectl delete service sample-sb-2
 ```
 delete the Deployment :
 ```bash
-kubectl delete deployment cloud-native-sample-sb-2
+kubectl delete deployment sample-sb-2
 ```
 you can stop the Kubernetes cluster with 
 ```bash
