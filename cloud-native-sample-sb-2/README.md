@@ -1,0 +1,1 @@
+# sample projects with spring boot 2.7.*
