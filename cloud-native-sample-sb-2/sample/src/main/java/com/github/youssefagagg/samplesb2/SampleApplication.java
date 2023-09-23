@@ -1,4 +1,4 @@
-package com.github.youssefagagg.cloudnativesamplesb2;
+package com.github.youssefagagg.samplesb2;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
