@@ -1,1 +1,0 @@
-# sample projects with spring boot 3.1.*
