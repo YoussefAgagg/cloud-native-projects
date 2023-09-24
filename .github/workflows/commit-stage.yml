@@ -3,7 +3,7 @@ on: push
 
 jobs:
   build:
-    name: Build and Test
+    name: Build and Test ${{ matrix.project }}
     runs-on: ubuntu-22.04
     permissions:
       contents: read
