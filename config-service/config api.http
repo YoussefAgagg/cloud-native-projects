@@ -1,0 +1,4 @@
+GET http://localhost:9002/sample/default
+Accept: application/json
+
+###
