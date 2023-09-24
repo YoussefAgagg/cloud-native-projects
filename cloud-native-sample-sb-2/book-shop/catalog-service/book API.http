@@ -1,0 +1,44 @@
+DELETE http://localhost:9001/books/1234567890
+Accept: application/json
+
+###
+PUT /http://localhost:9001/books/1234567890
+Content-Type: application/json
+
+{
+  "author": "jo",
+  "price": 66,
+  "title": "hello",
+  "isbn": "1234567890"
+}
+
+###
+GET http://localhost:9001/books
+Accept: application/json
+
+###
+POST http://localhost:9001/books
+Content-Type: application/json
+
+{
+  "author": "jo",
+  "price": 66,
+  "title": "hello",
+  "isbn": "1234567890"
+}
+
+###
+
+###
+POST http://localhost:9001/books
+Content-Type: application/json
+
+{
+  "author": "jo2",
+  "price": 660,
+  "title": "hello",
+  "isbn": "1234567891"
+}
+
+###
+
