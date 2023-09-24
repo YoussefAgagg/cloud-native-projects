@@ -1,6 +1,6 @@
 package com.example.catalogservice.web.rest;
 
-import com.example.catalogservice.BookService;
+import com.example.catalogservice.service.BookService;
 import com.example.catalogservice.domian.Book;
 
 

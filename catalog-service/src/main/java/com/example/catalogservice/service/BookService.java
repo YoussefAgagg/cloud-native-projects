@@ -1,4 +1,4 @@
-package com.example.catalogservice;
+package com.example.catalogservice.service;
 
 import com.example.catalogservice.domian.Book;
 import com.example.catalogservice.exception.BookAlreadyExistsException;
