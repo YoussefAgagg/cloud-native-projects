@@ -8,6 +8,13 @@ jobs:
     permissions:
       contents: read
       security-events: write
+    strategy:
+      fail-fast: false
+      matrix:
+        project: [
+          sample,
+          catalog-service
+        ]
     steps:
       - name: Checkout source code
         uses: actions/checkout@v3
@@ -19,7 +26,7 @@ jobs:
           cache: gradle
       - name: Build, unit tests and integration tests
         run: |
-          cd catalog-service
+          cd ${{ matrix.project }}
           chmod +x gradlew
           ./gradlew build
       - name: Code vulnerability scanning
