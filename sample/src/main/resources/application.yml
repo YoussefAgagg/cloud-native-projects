@@ -1,2 +1,5 @@
 hello:
   greeting: hello welcome!
+spring:
+  application:
+    name: sample
