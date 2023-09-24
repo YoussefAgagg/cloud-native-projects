@@ -3,3 +3,8 @@ hello:
 spring:
   application:
     name: sample
+  config:
+    import: "optional:configserver:"
+  cloud:
+    config:
+      uri: http://localhost:9002
