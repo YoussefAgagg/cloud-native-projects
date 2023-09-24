@@ -1,4 +1,4 @@
-package com.github.youssefagagg.samplesb2;
+package com.github.youssefagagg.sample;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
