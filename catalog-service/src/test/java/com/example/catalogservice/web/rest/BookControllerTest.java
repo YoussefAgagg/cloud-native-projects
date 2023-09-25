@@ -88,7 +88,7 @@ class BookControllerTest {
                 .expectStatus().isCreated()
                 .expectBody(Book.class).value(book -> assertThat(book).isNotNull())
                 .returnResult().getResponseBody();
-        var bookToUpdate = new Book(createdBook.id(), createdBook.isbn(), createdBook.title(), createdBook.author(), 7.95, createdBook.createdDate(),createdBook.lastModifiedDate(),createdBook.version());
+        var bookToUpdate = new Book(createdBook.id(), createdBook.isbn(), createdBook.title(), createdBook.author(), 7.95,createdBook.publisher(), createdBook.createdDate(),createdBook.lastModifiedDate(),createdBook.version());
 
         webTestClient
                 .put()
