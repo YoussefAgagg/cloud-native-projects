@@ -52,13 +52,13 @@ jobs:
       contents: read
       packages: write
       security-events: write
-      strategy:
-        fail-fast: false
-        matrix:
-          project: [
-            sample,
-            catalog-service
-          ]
+    strategy:
+      fail-fast: false
+      matrix:
+        project: [
+          sample,
+          catalog-service
+        ]
     steps:
       - name: Checkout source code
         uses: actions/checkout@v3
