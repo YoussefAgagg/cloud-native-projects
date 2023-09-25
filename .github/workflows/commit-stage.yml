@@ -3,6 +3,11 @@ on: push
 env:
   REGISTRY: ghcr.io
   VERSION: latest
+project:
+  names: [
+    sample,
+    catalog-service
+  ]
 jobs:
   build:
     name: Build and Test ${{ matrix.project }}
@@ -13,10 +18,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        project: [
-          sample,
-          catalog-service
-        ]
+        project: ${{ project.names }}
     steps:
       - name: Checkout source code
         uses: actions/checkout@v3
@@ -55,10 +57,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        project: [
-          sample,
-          catalog-service
-        ]
+        project: ${{ project.names }}
     steps:
       - name: Checkout source code
         uses: actions/checkout@v3
