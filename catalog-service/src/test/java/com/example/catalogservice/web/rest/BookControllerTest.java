@@ -18,8 +18,14 @@ class BookControllerTest {
 
     @Test
     void whenGetRequestWithIdThenBookReturned() {
-        var bookIsbn = "1231231230";
-        var bookToCreate = new Book(1L,bookIsbn, "Title", "Author", 9.90,0);
+        var bookIsbn = "1231231231";
+        var bookToCreate = Book
+                .builder()
+                .isbn(bookIsbn)
+                .title("Title")
+                .author("Author")
+                .price(9.90)
+                .build();
         Book expectedBook = webTestClient
                 .post()
                 .uri("/books")
@@ -42,7 +48,13 @@ class BookControllerTest {
 
     @Test
     void whenPostRequestThenBookCreated() {
-        var expectedBook = new Book(1L,"1231231231", "Title", "Author", 9.90,0);
+        var expectedBook = Book
+                .builder()
+                .isbn("1231231230")
+                .title("Title")
+                .author("Author")
+                .price(9.90)
+                .build();
 
         webTestClient
                 .post()
@@ -59,7 +71,13 @@ class BookControllerTest {
     @Test
     void whenPutRequestThenBookUpdated() {
         var bookIsbn = "1231231232";
-        var bookToCreate = new Book(1L,"1231231231", "Title", "Author", 9.90,0);
+        var bookToCreate = Book
+                .builder()
+                .isbn(bookIsbn)
+                .title("Title")
+                .author("Author")
+                .price(9.90)
+                .build();
         Book createdBook = webTestClient
                 .post()
                 .uri("/books")
@@ -68,7 +86,7 @@ class BookControllerTest {
                 .expectStatus().isCreated()
                 .expectBody(Book.class).value(book -> assertThat(book).isNotNull())
                 .returnResult().getResponseBody();
-        var bookToUpdate = new Book(createdBook.id(),createdBook.isbn(), createdBook.title(), createdBook.author(), 7.95,createdBook.version());
+        var bookToUpdate = new Book(createdBook.id(), createdBook.isbn(), createdBook.title(), createdBook.author(), 7.95, createdBook.version());
 
         webTestClient
                 .put()
@@ -85,7 +103,13 @@ class BookControllerTest {
     @Test
     void whenDeleteRequestThenBookDeleted() {
         var bookIsbn = "1231231233";
-        var bookToCreate =new Book(1L,"1231231231", "Title", "Author", 9.90,0);
+        var bookToCreate = Book
+                .builder()
+                .isbn(bookIsbn)
+                .title("Title")
+                .author("Author")
+                .price(9.90)
+                .build();
         webTestClient
                 .post()
                 .uri("/books")
