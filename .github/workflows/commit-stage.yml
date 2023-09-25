@@ -3,13 +3,12 @@ on: push
 env:
   REGISTRY: ghcr.io
   VERSION: latest
-project:
-  names: [
-    sample,
-    catalog-service
-  ]
 jobs:
+  setup:
+    outputs:
+      matrix: [sample,catalog-service]
   build:
+    needs: setup
     name: Build and Test ${{ matrix.project }}
     runs-on: ubuntu-22.04
     permissions:
@@ -18,7 +17,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        project: ${{ project.names }}
+        project: ${{ needs.setup.outputs.matrix }}
     steps:
       - name: Checkout source code
         uses: actions/checkout@v3
@@ -48,7 +47,7 @@ jobs:
   package:
     name: Package and Publish ${{ matrix.project }}
     if: ${{ github.ref == 'refs/heads/master' }}
-    needs: [ build ]
+    needs: [setup, build ]
     runs-on: ubuntu-22.04
     permissions:
       contents: read
@@ -57,7 +56,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        project: ${{ project.names }}
+        project: ${{ needs.setup.outputs.matrix }}
     steps:
       - name: Checkout source code
         uses: actions/checkout@v3
