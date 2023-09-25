@@ -1,13 +1,17 @@
 package com.example.catalogservice.domian;
 
 import lombok.Builder;
+import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.annotation.Version;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Positive;
+import java.time.Instant;
+
 @Builder
 public record Book(
         @Id
@@ -25,6 +29,10 @@ public record Book(
         @NotNull(message = "The book price must be defined.")
         @Positive(message = "The book price must be greater than zero.")
         Double price,
+        @CreatedDate
+        Instant createdDate,
+        @LastModifiedDate
+        Instant lastModifiedDate,
         @Version
         int version) {
 }
