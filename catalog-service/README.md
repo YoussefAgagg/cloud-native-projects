@@ -49,3 +49,35 @@ to publish the imge build by Buildpacks use:
 ```bash
 ./gradlew bootBuildImage  --imageName ghcr.io/youssefagagg/catalog-service   --publishImage  -PregistryUrl=ghcr.io -PregistryUsername=youssefagagg  -PregistryToken=<your_github_token>
 ```
+# 7 Kubernetes fundamentals for Spring Boot
+to load an image to k8s
+```bash
+ minikube image load catalog-service --profile bookshop
+```
+CREATING A DEPLOYMENT OBJECT FROM A MANIFEST
+```bash
+kubectl apply -f k8s/deployment.yml
+```
+```bash
+ kubectl get all -l app=catalog-service
+```
+
+```bash
+kubectl logs deployment/catalog-service
+```
+CREATING A SERVICE OBJECT FROM A MANIFEST
+```bash
+kubectl apply -f k8s/service.yml
+```
+```bash
+kubectl get svc -l app=catalog-service
+```
+```bash
+kubectl port-forward service/catalog-service 9001:80
+```
+```bash
+kubectl apply -f k8s/deployment.yml.
+```
+```bash
+kubectl delete -f k8s
+```
