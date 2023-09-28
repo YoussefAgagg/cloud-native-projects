@@ -11,7 +11,7 @@ spring:
   datasource:
     username: user
     password: password
-    url: jdbc:postgresql://localhost:5432/bookshop_catalog
+    url: jdbc:postgresql://localhost:5432/bookshopdb_catalog
     hikari:
       connection-timeout: 2000
       maximum-pool-size: 5
