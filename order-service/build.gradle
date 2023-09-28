@@ -22,10 +22,21 @@ repositories {
 }
 
 ext {
+    set('springCloudVersion', "2021.0.8")
     set('testcontainersVersion', "1.18.3")
 }
+dependencyManagement {
+    imports {
+        mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+        mavenBom "org.testcontainers:testcontainers-bom:${testcontainersVersion}"
+    }
+}
+
 
 dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    implementation 'org.springframework.retry:spring-retry'
+    implementation 'org.springframework.cloud:spring-cloud-starter-config'
     runtimeOnly 'org.flywaydb:flyway-core'
     runtimeOnly 'org.springframework:spring-jdbc'
     implementation 'org.springframework.boot:spring-boot-starter-data-r2dbc'
@@ -44,11 +55,7 @@ dependencies {
     testImplementation 'org.testcontainers:r2dbc'
 }
 
-dependencyManagement {
-    imports {
-        mavenBom "org.testcontainers:testcontainers-bom:${testcontainersVersion}"
-    }
-}
+
 
 tasks.named('test') {
     useJUnitPlatform()
