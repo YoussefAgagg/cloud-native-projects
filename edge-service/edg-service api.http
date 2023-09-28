@@ -1,0 +1,10 @@
+### orders
+GET http://localhost:9000/orders
+Accept: application/json
+
+
+### books
+GET http://localhost:9000/books
+Accept: application/json
+
+###
