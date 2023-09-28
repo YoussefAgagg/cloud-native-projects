@@ -2,7 +2,7 @@
 * run configuration server todo add link to readme for config server
 database:
 ```bash
-docker run -d --name bookshop-postgres -e POSTGRES_USER=user -e POSTGRES_PASSWORD=password  -e POSTGRES_DB=bookshop_catalog -p 5432:5432 postgres:14.4
+docker run -d --name bookshop-postgres -e POSTGRES_USER=user -e POSTGRES_PASSWORD=password  -e POSTGRES_DB=bookshopdb_catalog -p 5432:5432 postgres:14.4
 ```
 stop the container with
 ```bash
@@ -80,4 +80,11 @@ kubectl apply -f k8s/deployment.yml.
 ```
 ```bash
 kubectl delete -f k8s
+```
+#  local Kubernetes development workflow
+[Tilt](https://tilt.dev)
+[install](https://docs.tilt.dev/install.html)
+in  directory contains Tiltfile run:
+```bash
+tilt up
 ```
