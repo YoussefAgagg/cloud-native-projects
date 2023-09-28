@@ -16,7 +16,9 @@ jobs:
         project: [
           sample,
           catalog-service,
-          config-service
+          config-service,
+          order-service
+
         ]
     steps:
       - name: Checkout source code
@@ -67,7 +69,8 @@ jobs:
         project: [
           sample,
           catalog-service,
-          config-service
+          config-service,
+          order-service
         ]
     steps:
       - name: Checkout source code
