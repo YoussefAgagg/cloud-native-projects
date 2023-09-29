@@ -25,11 +25,11 @@ spec:
           ports:
             - containerPort: 9001
           env:
-            - name: BPL_JVM_THREAD_COUNT
-              value: "50"
+            - name: BOOKSHOP_CATALOG_SERVICE_URI
+              value: http://catalog-service
             - name: SPRING_CLOUD_CONFIG_URI
               value: http://config-service
-            - name: SPRING_DATASOURCE_URL
+            - name: SPRING_R2DBC_URL
+              value: r2dbc:postgresql://bookshop-postgres/bookshopdb_order
+            - name: SPRING_FLYWAY_URL
               value: jdbc:postgresql://bookshop-postgres/bookshopdb_order
-            - name: SPRING_PROFILES_ACTIVE
-              value: testdata
