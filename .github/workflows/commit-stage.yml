@@ -18,7 +18,8 @@ jobs:
           catalog-service,
           config-service,
           order-service,
-          edge-service
+          edge-service,
+          dispatcher-service
 
         ]
     steps:
@@ -72,7 +73,8 @@ jobs:
           catalog-service,
           config-service,
           order-service,
-          edge-service
+          edge-service,
+          dispatcher-service
         ]
     steps:
       - name: Checkout source code
