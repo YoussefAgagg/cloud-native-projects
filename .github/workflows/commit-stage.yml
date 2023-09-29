@@ -54,7 +54,7 @@ jobs:
           kubeval: 0.16.1
           command: |
             cd ${{ matrix.project }}
-            kubeval --strict -d k8s
+            kubeval --schema-location https://raw.githubusercontent.com/yannh/kubernetes-json-schema/master/ --strict -d k8s
   package:
     name: Package and Publish ${{ matrix.project }}
     if: ${{ github.ref == 'refs/heads/master' }}
