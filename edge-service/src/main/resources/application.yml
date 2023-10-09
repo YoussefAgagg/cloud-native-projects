@@ -68,8 +68,7 @@ spring:
             - name: CircuitBreaker
               args:
                 name: orderCircuitBreaker
-  data:
-    redis:
+  redis:
       connect-timeout: 2s
       host: localhost
       port: 6379
