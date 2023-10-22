@@ -77,6 +77,21 @@ spring:
     timeout: 10m
     redis:
       namespace: bookshop:edge
+  security:
+    oauth2:
+      client:
+        registration:
+          edge-client-oidc:
+            provider: spring
+            client-id: edge-service
+            client-secret: edge-service-secret
+            authorization-grant-type: authorization_code
+            #            redirect-uri: "http://127.0.0.1:9000/login/oauth2/code/edge-client-oidc"
+            scope: openid
+            client-authentication-method: client_secret_basic
+        provider:
+          spring:
+            issuer-uri: http://localhost:9005
 
 resilience4j:
   circuitbreaker:
