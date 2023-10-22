@@ -1,19 +1,9 @@
-package com.example.catalogservice.web.rest;
+package com.github.youssefagagg.catalogservice.web.rest;
 
-import com.example.catalogservice.service.BookService;
-import com.example.catalogservice.domian.Book;
-
-
+import com.github.youssefagagg.catalogservice.domian.Book;
+import com.github.youssefagagg.catalogservice.service.BookService;
 import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseStatus;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 

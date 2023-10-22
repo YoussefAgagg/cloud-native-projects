@@ -1,14 +1,16 @@
-package com.example.catalogservice.web.rest.advise;
-import java.util.HashMap;
-import java.util.Map;
-import com.example.catalogservice.exception.BookAlreadyExistsException;
-import com.example.catalogservice.exception.BookNotFoundException;
+package com.github.youssefagagg.catalogservice.web.rest.advise;
+
+import com.github.youssefagagg.catalogservice.exception.BookAlreadyExistsException;
+import com.github.youssefagagg.catalogservice.exception.BookNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
+
+import java.util.HashMap;
+import java.util.Map;
 
 @RestControllerAdvice
 public class BookControllerAdvice {

@@ -1,6 +1,6 @@
-package com.example.catalogservice.repository;
+package com.github.youssefagagg.catalogservice.repository;
 
-import com.example.catalogservice.domian.Book;
+import com.github.youssefagagg.catalogservice.domian.Book;
 import org.springframework.data.jdbc.repository.query.Modifying;
 import org.springframework.data.jdbc.repository.query.Query;
 import org.springframework.data.repository.CrudRepository;

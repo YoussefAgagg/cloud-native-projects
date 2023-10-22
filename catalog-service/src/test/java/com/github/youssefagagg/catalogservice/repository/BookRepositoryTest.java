@@ -1,7 +1,7 @@
-package com.example.catalogservice.repository;
+package com.github.youssefagagg.catalogservice.repository;
 
-import com.example.catalogservice.config.DataConfig;
-import com.example.catalogservice.domian.Book;
+import com.github.youssefagagg.catalogservice.config.DataConfig;
+import com.github.youssefagagg.catalogservice.domian.Book;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.data.jdbc.DataJdbcTest;
@@ -13,7 +13,6 @@ import org.springframework.test.context.ActiveProfiles;
 import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
 
 @DataJdbcTest
 @Import(DataConfig.class)

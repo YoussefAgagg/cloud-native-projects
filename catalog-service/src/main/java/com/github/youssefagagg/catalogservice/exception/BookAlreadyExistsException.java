@@ -1,4 +1,4 @@
-package com.example.catalogservice.exception;
+package com.github.youssefagagg.catalogservice.exception;
 
 public class BookAlreadyExistsException extends RuntimeException {
 

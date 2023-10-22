@@ -1,9 +1,9 @@
-package com.example.catalogservice.service;
+package com.github.youssefagagg.catalogservice.service;
 
-import com.example.catalogservice.domian.Book;
-import com.example.catalogservice.exception.BookAlreadyExistsException;
-import com.example.catalogservice.exception.BookNotFoundException;
-import com.example.catalogservice.repository.BookRepository;
+import com.github.youssefagagg.catalogservice.domian.Book;
+import com.github.youssefagagg.catalogservice.exception.BookAlreadyExistsException;
+import com.github.youssefagagg.catalogservice.exception.BookNotFoundException;
+import com.github.youssefagagg.catalogservice.repository.BookRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

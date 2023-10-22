@@ -1,4 +1,4 @@
-package com.example.catalogservice.domian;
+package com.github.youssefagagg.catalogservice.domian;
 
 import lombok.Builder;
 import org.springframework.data.annotation.CreatedDate;

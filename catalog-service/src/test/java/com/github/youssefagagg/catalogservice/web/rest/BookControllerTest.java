@@ -1,9 +1,8 @@
-package com.example.catalogservice.web.rest;
+package com.github.youssefagagg.catalogservice.web.rest;
 
 
-import com.example.catalogservice.domian.Book;
+import com.github.youssefagagg.catalogservice.domian.Book;
 import org.junit.jupiter.api.Test;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;

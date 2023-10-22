@@ -1,4 +1,4 @@
-package com.example.catalogservice;
+package com.github.youssefagagg.catalogservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

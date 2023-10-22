@@ -1,4 +1,4 @@
-package com.example.catalogservice.config;
+package com.github.youssefagagg.catalogservice.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.jdbc.repository.config.EnableJdbcAuditing;
