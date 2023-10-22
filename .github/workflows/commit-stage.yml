@@ -19,7 +19,8 @@ jobs:
           config-service,
           order-service,
           edge-service,
-          dispatcher-service
+          dispatcher-service,
+          authorization-server
 
         ]
     steps:
@@ -74,7 +75,8 @@ jobs:
           config-service,
           order-service,
           edge-service,
-          dispatcher-service
+          dispatcher-service,
+          authorization-server
         ]
     steps:
       - name: Checkout source code
